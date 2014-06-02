@@ -1,0 +1,28 @@
+1、修改 js\script.js ,增加  App.setPath("${ctx}/static");  传入项目路径，解决script.js中调用资源路径无效的问题.
+2、修改 css\cloud-admin.css 中  #content .page-header  注释 /* min-height: 85px; */ .调整了页面面包屑的高度. 
+3、部分CSS文件的编码属性由GBK更换为UTF-8.
+
+4、侧边栏字体大小的设置
+   一级菜单：.sidebar-menu > ul > li > a
+.sidebar-menu > ul > li > a {
+  display: block;
+  position: relative;
+  margin: 0;
+  border: 0 none;
+  padding: 15px 15px 15px 20px;
+  text-decoration: none;
+  font-size: 13px;//  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+   
+   二级菜单：.sidebar-menu > ul > li > ul.sub > li > a  
+.sidebar-menu > ul > li > ul.sub > li > a {
+  color: #555555;
+  margin-left: 0px;
+  padding-left: 5px;
+  font-size: 13px;//  font-size: 14px;
+  font-weight: 400;
+}
+
+ 

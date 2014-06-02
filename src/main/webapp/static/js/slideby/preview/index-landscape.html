@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>预览</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="../scripts/jquery.js"></script>
+<script>
+$(function () {
+var url = getQueryString("url");
+
+var curWwwPath=window.document.location.href;  
+var pathName=window.document.location.pathname;  
+var pos=curWwwPath.indexOf(pathName);  
+//获取主机地址，如： http://localhost:8080 
+var localhostPaht=curWwwPath.substring(0,pos)
+
+$("#iframe").attr("src",localhostPaht+url);
+$("#index").attr("href","index.html?url="+url);
+});
+
+
+//通过正则表达式分析取得另一个页面URL传入的参数值.
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+</script>
+</head>
+
+<body>
+
+
+<div class="wrapper-landscape">
+	<a id="index" href="index.html"><img class="go-portrait" src="images/go-portrait.png" alt="img"></a>
+	<div class="iphone-landscape">
+		<img src="images/iphone-landscape.png" alt="img">
+        <div class="hide-scroll-2"></div>
+        <div class="hide-scroll-3"></div>
+        <iframe id="iframe" class="iphone-landscape-frame" src="../index.html" width="582" height="325"/>	
+    </div>
+</div>
+        
+
+
+</body>
+</html>
