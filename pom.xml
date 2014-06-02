@@ -37,7 +37,7 @@ java.lang.ClassNotFoundException: org.apache.commons.codec.DecoderException
 	
 		<!-- Plugin的属性定义 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.6</java.version>
+		<java.version>1.7</java.version>
 	
 		<!-- 项目属性 -->
 		
@@ -514,7 +514,7 @@ java.lang.ClassNotFoundException: org.apache.commons.codec.DecoderException
 									<version>3.2.1</version>
 								</requireMavenVersion>
 								<requireJavaVersion>
-									<version>1.6</version>
+									<version>${java.version}</version>
 								</requireJavaVersion>
 								<bannedDependencies>
 									<searchTransitive>true</searchTransitive>
