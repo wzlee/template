@@ -1,0 +1,30 @@
+Maven 手动添加 JAR 包到本地仓库
+-Dfile=jar包的目录地址
+-DgroupId=groupId
+-DartifactId=artifactId
+-Dversion=版本号
+
+EX 1:
+mvn install:install-file -Dfile=E:\资料\项目资源\ueditor1_4_2-src\jsp\lib\ueditor-1.1.0.jar -DgroupId=com.baidu -DartifactId=ueditor -Dversion=1.1.0 -Dpackaging=jar
+
+对应pom.xml的格式
+<!-- UEditor富文本编辑器 -->
+<dependency>
+  <groupId>com.baidu</groupId>
+  <artifactId>ueditor</artifactId>
+  <version>1.1.0</version>
+</dependency>
+<!-- /UEditor富文本编辑器 -->
+
+
+EX 2:
+mvn install:install-file -Dfile=C:\Users\Libra\Downloads\umeditor1_2_2-utf8-jsp\jsp\ueditor-mini.jar -DgroupId=com.baidu -DartifactId=ueditor-mini -Dversion=1.2.2 -Dpackaging=jar
+
+对应pom.xml的格式
+<!-- UEditor富文本编辑器 -->
+<dependency>
+  <groupId>com.baidu</groupId>
+  <artifactId>ueditor-mini</artifactId>
+  <version>1.2.2</version>
+</dependency>
+<!-- /UEditor富文本编辑器 -->
