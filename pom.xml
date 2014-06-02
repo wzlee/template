@@ -505,9 +505,12 @@ java.lang.ClassNotFoundException: org.apache.commons.codec.DecoderException
 				<executions>
 					<execution>
 						<id>enforce-banned-dependencies</id>
+						<!--goal "enforce"是被忽略的：  maven-enforcer-plugin (goal "enforce") is ignored by m2e. -->
+						<!--  
 						<goals>
 							<goal>enforce</goal>
-						</goals>
+						</goals> 
+						-->
 						<configuration>
 							<rules>
 								<requireMavenVersion>
